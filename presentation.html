@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -425,6 +426,7 @@
 
         /* ===== MOBILE ADAPTATION ===== */
         @media (max-width: 768px) {
+
             .nav-arrows,
             .nav-dots {
                 display: none;
@@ -546,6 +548,7 @@
 
         /* Адаптивность для симметричных сеток */
         @media (max-width: 768px) {
+
             .grid-2,
             .grid-3 {
                 grid-template-columns: repeat(2, 1fr);
@@ -554,6 +557,7 @@
         }
 
         @media (max-width: 480px) {
+
             .grid-2,
             .grid-3 {
                 grid-template-columns: 1fr;
@@ -825,6 +829,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="presentation">
         <!-- Progress Bar (Mobile Stories) -->
@@ -841,7 +846,8 @@
             <div class="slide-inner">
                 <div class="slide-label">Социология · Макс Вебер</div>
                 <h1>Легитимное государство и теория рациональной бюрократии</h1>
-                <p class="subtitle">Исследование концепции легитимности, природы государства и бюрократической организации</p>
+                <p class="subtitle">Исследование концепции легитимности, природы государства и бюрократической
+                    организации</p>
                 <div class="authors-block">
                     <p class="uni">Финансовый университет</p>
                     <p class="small-text">2026</p>
@@ -854,9 +860,11 @@
             <div class="slide-inner">
                 <div class="slide-label">01 — Введение</div>
                 <h2>Понятие легитимности</h2>
-                <p class="body-text">Почему люди признают власть определённых лиц или учреждений и соглашаются выполнять их распоряжения?</p>
+                <p class="body-text">Почему люди признают власть определённых лиц или учреждений и соглашаются выполнять
+                    их распоряжения?</p>
                 <div class="info-card accent">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Max_Weber_1894.jpg" alt="Фото Макс Вебера">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Max_Weber_1894.jpg"
+                        alt="Фото Макс Вебера">
                     <h3>Макс Вебер (1864–1920)</h3>
                     <p>Немецкий социолог, создатель понятия легитимности в социологии господства</p>
                 </div>
@@ -879,7 +887,8 @@
                     </div>
                 </div>
                 <div class="callout">
-                    <p>Власть может существовать при сопротивлении, но для устойчивого господства важно <span class="highlight">признание права на власть</span></p>
+                    <p>Власть может существовать при сопротивлении, но для устойчивого господства важно <span
+                            class="highlight">признание права на власть</span></p>
                 </div>
             </div>
         </div>
@@ -898,7 +907,8 @@
                     <div class="item">Добровольное подчинение</div>
                 </div>
                 <div class="callout">
-                    <p>Легитимность — это внутреннее обоснование власти, благодаря которому люди подчиняются <span class="highlight">добровольно</span></p>
+                    <p>Легитимность — это внутреннее обоснование власти, благодаря которому люди подчиняются <span
+                            class="highlight">добровольно</span></p>
                 </div>
             </div>
         </div>
@@ -970,7 +980,8 @@
                     <div class="item">Легитимность</div>
                 </div>
                 <div class="callout">
-                    <p>Сила государства отличается от силы банды преступников именно <span class="highlight">наличием легитимности</span></p>
+                    <p>Сила государства отличается от силы банды преступников именно <span class="highlight">наличием
+                            легитимности</span></p>
                 </div>
             </div>
         </div>
@@ -1109,13 +1120,13 @@
         <div class="nav-arrows">
             <button class="nav-arrow" id="prevBtn" aria-label="Предыдущий слайд">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M15 5l-8 5 8 5"/>
+                    <path d="M15 5l-8 5 8 5" />
                 </svg>
             </button>
             <div class="nav-counter" id="navCounter">1/12</div>
             <button class="nav-arrow" id="nextBtn" aria-label="Следующий слайд">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 5l8 5-8 5"/>
+                    <path d="M5 5l8 5-8 5" />
                 </svg>
             </button>
         </div>
@@ -1137,14 +1148,14 @@
                 this.navDots = document.getElementById('navDots');
                 this.touchLeft = document.getElementById('touchLeft');
                 this.touchRight = document.getElementById('touchRight');
-                
+
                 this.autoProgressInterval = null;
-                this.autoProgressDelay = 8000;
+                this.autoProgressDelay = 800000000000;
                 this.isMobile = window.innerWidth <= 768;
-                
+
                 this.init();
             }
-            
+
             init() {
                 this.createProgressSegments();
                 this.createNavDots();
@@ -1152,7 +1163,7 @@
                 this.addEventListeners();
                 this.startAutoProgress();
             }
-            
+
             createProgressSegments() {
                 this.progressBar.innerHTML = '';
                 for (let i = 0; i < this.totalSlides; i++) {
@@ -1163,7 +1174,7 @@
                 }
                 this.progressSegments = this.progressBar.querySelectorAll('.progress-segment');
             }
-            
+
             createNavDots() {
                 this.navDots.innerHTML = '';
                 for (let i = 0; i < this.totalSlides; i++) {
@@ -1175,7 +1186,7 @@
                 }
                 this.navDotElements = this.navDots.querySelectorAll('.nav-dot');
             }
-            
+
             updateSlide() {
                 // Update slides
                 this.slides.forEach((slide, index) => {
@@ -1188,7 +1199,7 @@
                         slide.classList.add('next');
                     }
                 });
-                
+
                 // Update progress bar
                 this.progressSegments.forEach((segment, index) => {
                     segment.classList.remove('done', 'current');
@@ -1198,47 +1209,47 @@
                         segment.classList.add('current');
                     }
                 });
-                
+
                 // Update navigation
                 this.prevBtn.disabled = this.currentSlide === 0;
                 this.nextBtn.disabled = this.currentSlide === this.totalSlides - 1;
                 this.navCounter.textContent = `${this.currentSlide + 1}/${this.totalSlides}`;
-                
+
                 // Update dots
                 this.navDotElements.forEach((dot, index) => {
                     dot.classList.toggle('active', index === this.currentSlide);
                 });
-                
+
                 // Reset auto progress
                 this.resetAutoProgress();
             }
-            
+
             goToSlide(index) {
                 if (index >= 0 && index < this.totalSlides) {
                     this.currentSlide = index;
                     this.updateSlide();
                 }
             }
-            
+
             nextSlide() {
                 if (this.currentSlide < this.totalSlides - 1) {
                     this.currentSlide++;
                     this.updateSlide();
                 }
             }
-            
+
             prevSlide() {
                 if (this.currentSlide > 0) {
                     this.currentSlide--;
                     this.updateSlide();
                 }
             }
-            
+
             addEventListeners() {
                 // Desktop navigation
                 this.prevBtn.addEventListener('click', () => this.prevSlide());
                 this.nextBtn.addEventListener('click', () => this.nextSlide());
-                
+
                 // Keyboard
                 document.addEventListener('keydown', (e) => {
                     if (e.key === 'ArrowRight' || e.key === ' ') {
@@ -1249,24 +1260,24 @@
                         this.prevSlide();
                     }
                 });
-                
+
                 // Touch zones for mobile
                 this.touchLeft.addEventListener('click', () => this.prevSlide());
                 this.touchRight.addEventListener('click', () => this.nextSlide());
-                
+
                 // Touch swipe
                 let touchStartX = 0;
                 let touchEndX = 0;
-                
+
                 document.addEventListener('touchstart', (e) => {
                     touchStartX = e.changedTouches[0].screenX;
                     this.resetAutoProgress();
                 }, { passive: true });
-                
+
                 document.addEventListener('touchend', (e) => {
                     touchEndX = e.changedTouches[0].screenX;
                     const diff = touchStartX - touchEndX;
-                    
+
                     if (Math.abs(diff) > 50) {
                         if (diff > 0) {
                             this.nextSlide();
@@ -1275,7 +1286,7 @@
                         }
                     }
                 }, { passive: true });
-                
+
                 // Wheel for desktop
                 document.addEventListener('wheel', (e) => {
                     this.resetAutoProgress();
@@ -1285,7 +1296,7 @@
                         this.prevSlide();
                     }
                 }, { passive: true });
-                
+
                 // Visibility change
                 document.addEventListener('visibilitychange', () => {
                     if (document.hidden) {
@@ -1294,37 +1305,38 @@
                         this.startAutoProgress();
                     }
                 });
-                
+
                 // Resize handler
                 window.addEventListener('resize', () => {
                     this.isMobile = window.innerWidth <= 768;
                 });
             }
-            
+
             startAutoProgress() {
                 this.stopAutoProgress();
                 this.autoProgressInterval = setInterval(() => {
                     this.nextSlide();
                 }, this.autoProgressDelay);
             }
-            
+
             stopAutoProgress() {
                 if (this.autoProgressInterval) {
                     clearInterval(this.autoProgressInterval);
                     this.autoProgressInterval = null;
                 }
             }
-            
+
             resetAutoProgress() {
                 this.stopAutoProgress();
                 this.startAutoProgress();
             }
         }
-        
+
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             new PresentationManager();
         });
     </script>
 </body>
+
 </html>
