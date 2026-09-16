@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Легитимное государство и теория рациональной бюрократии М. Вебера</title>
+  <meta name="description" content="Современный цифровой доклад по социологии Макса Вебера о легитимности, государстве и рациональной бюрократии">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/src/main.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Навигация -->
+    <nav class="navigation">
+      <div class="nav-container">
+        <div class="nav-content">
+          <div class="nav-links">
+            <a href="#introduction" class="nav-link">Введение</a>
+            <a href="#state" class="nav-link">Государство</a>
+            <a href="#bureaucracy" class="nav-link">Бюрократия</a>
+            <a href="#conclusion" class="nav-link">Заключение</a>
+          </div>
+          <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+            <span class="theme-icon">◐</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <header class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="hero-meta">Социология · Макс Вебер · Цифровой доклад</p>
+          <h1 class="hero-title">
+            Легитимное государство и теория рациональной бюрократии
+          </h1>
+          <p class="hero-subtitle">
+            Исследование концепции легитимности, природы государства и бюрократической организации в современной социологии
+          </p>
+          <div class="hero-footer">
+            <span class="university">Финансовый университет</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+      <!-- Введение -->
+      <section id="introduction" class="section">
+        <div class="section-container">
+          <div class="content-column">
+            <h2 class="section-title">Введение. Понятие легитимности в социологии М. Вебера</h2>
+            
+            <div class="content-block">
+              <h3 class="subsection-title">Понятие власти и господства</h3>
+              <p class="text">
+                Одним из важнейших вопросов социологии является изучение власти и отношений господства. 
+                В социологии власть обычно понимается как способность одного человека или группы людей 
+                влиять на поведение других людей, добиваясь от них выполнения своих требований вопреки сопротивлению.
+              </p>
+              <p class="text">
+                Макс Вебер (1864–1920) определил власть как возможность осуществлять собственную волю 
+                внутри социальных отношений вопреки сопротивлению других участников. Однако он обратил внимание 
+                на то, что одна лишь способность принуждать не делает власть устойчивой.
+              </p>
+            </div>
+
+            <div class="content-block">
+              <h3 class="subsection-title">Сущность легитимности</h3>
+              <p class="text">
+                Понятие легитимности занимает центральное место в социологии господства Макса Вебера. 
+                В общепринятом смысле <strong>легитимность</strong> — это признание правомерности власти 
+                или установленного порядка.
+              </p>
+              <p class="text">
+                Вебер особо подчёркивал, что власть и господство не являются полнотью однозначными понятиями. 
+                Легитимность означает внутреннее оправдание, обоснование власти, благодаря которому 
+                подчинённые выполняют распоряжения добровольно, а не только из страха наказания.
+              </p>
+            </div>
+
+            <div class="content-block">
+              <h3 class="subsection-title">Отличие легитимной власти от принуждения</h3>
+              <p class="text">
+                Важно отметить, что легитимность не обязательно означает обязательное согласие общества 
+                с конкретным носителем власти или с существующими методами. Признание власти обществом 
+                может основываться на различных основаниях.
+              </p>
+              <p class="text">
+                Легитимность имеет большее значение для устойчивости власти, чем эффективность принуждения. 
+                Если люди признают власть легитимной, они подчиняются ей добровольно. Если же легитимность 
+                отсутствует, власть вынуждена опираться исключительно на насилие, что делает её неустойчивой.
+              </p>
+            </div>
+
+            <div class="scheme-block">
+              <h3 class="subsection-title">Схема: Власть vs Легитимность</h3>
+              <div class="interactive-scheme" id="powerScheme">
+                <div class="scheme-element power">
+                  <div class="scheme-label">Власть</div>
+                  <div class="scheme-desc">Способность влиять вопреки сопротивлению</div>
+                </div>
+                <div class="scheme-arrow">→</div>
+                <div class="scheme-element legitimacy">
+                  <div class="scheme-label">Легитимность</div>
+                  <div class="scheme-desc">Признание правомерности власти</div>
+                </div>
+                <div class="scheme-arrow">→</div>
+                <div class="scheme-element voluntary">
+                  <div class="scheme-label">Добровольное подчинение</div>
+                  <div class="scheme-desc">Исполнение без принуждения</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="subsection-title">Три типа легитимного господства по Веберу</h3>
+              <p class="text">
+                Для объяснения различных способов подчинения Вебер выделил три основных, или «идеальных», 
+                типа легитимного господства:
+              </p>
+              
+              <div class="types-grid">
+                <div class="type-card traditional">
+                  <div class="type-number">01</div>
+                  <h4 class="type-title">Традиционное</h4>
+                  <p class="type-description">
+                    Вера в святость издревле существующих порядков и власть монарха. 
+                    Основано на обычаях и традициях.
+                  </p>
+                </div>
+                
+                <div class="type-card charismatic">
+                  <div class="type-number">02</div>
+                  <h4 class="type-title">Харизматическое</h4>
+                  <p class="type-description">
+                    Преданность личности лидера, основанная на вере в его 
+                    сверхъестественные способности, героизм или святость.
+                  </p>
+                </div>
+                
+                <div class="type-card rational">
+                  <div class="type-number">03</div>
+                  <h4 class="type-title">Рационально-легальное</h4>
+                  <p class="type-description">
+                    Вера в законность установленных правил и право тех, кто наделён 
+                    властью, отдавать приказы. Основано на формальном праве.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="subsection-title">Значение легитимности для существования власти</h3>
+              <p class="text">
+                Признание власти обществом (легитимность) имеет критическое значение для выживания государства:
+              </p>
+              <ul class="list">
+                <li><strong>Стабильность системы:</strong> легитимная власть не требует постоянного расхода ресурсов на тотальный контроль и подавление</li>
+                <li><strong>Эффективность управления:</strong> законы и реформы исполняются быстрее и качественнее при доверии общества</li>
+                <li><strong>Кризис легитимности:</strong> если общество перестаёт признавать власть, государство теряет устойчивость и может распасться</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Государство -->
+      <section id="state" class="section">
+        <div class="section-container">
+          <div class="content-column">
+            <h2 class="section-title">Легитимное государство в концепции М. Вебера</h2>
+            
+            <div class="content-block">
+              <h3 class="subsection-title">Понятие государства</h3>
+              <p class="text">
+                По определению Вебера, государство — это особый институт (или политическое сообщество), 
+                который претендует на монополию на легитимное физическое насилие в пределах определённой территории.
+              </p>
+              
+              <div class="state-features">
+                <div class="feature-item">
+                  <div class="feature-icon">⬛</div>
+                  <h4 class="feature-title">Территориальность</h4>
+                  <p class="feature-desc">Власть государства строго ограничена его границами</p>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">⬛</div>
+                  <h4 class="feature-title">Монополия на насилие</h4>
+                  <p class="feature-desc">Только государство имеет право применять силу или разрешать её применение</p>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">⬛</div>
+                  <h4 class="feature-title">Институциональный характер</h4>
+                  <p class="feature-desc">Государство отделено от конкретных личностей правителей</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="subsection-title">Государство как институт легитимного физического принуждения</h3>
+              <p class="text">
+                Вебер подчёркивал, что насилие не является единственным средством государства, 
+                но оно является для него специфическим. Ключевое слово здесь — <strong>легитимное</strong>. 
+                Это значит, что общество признаёт право государства применять силу как обоснованное, 
+                справедливое и законное.
+              </p>
+              <p class="text">
+                Сила государства отличается от силы банды преступников именно наличием легитимности.
+              </p>
+            </div>
+
+            <div class="scheme-block">
+              <h3 class="subsection-title">Схема: Связь государства, власти и легитимности</h3>
+              <div class="interactive-scheme state-scheme">
+                <div class="scheme-element">
+                  <div class="scheme-label">Власть</div>
+                  <div class="scheme-desc">Возможность проводить свою волю</div>
+                </div>
+                <div class="scheme-arrow">↓</div>
+                <div class="scheme-element">
+                  <div class="scheme-label">Государство</div>
+                  <div class="scheme-desc">Организационная форма власти на территории</div>
+                </div>
+                <div class="scheme-arrow">↓</div>
+                <div class="scheme-element">
+                  <div class="scheme-label">Легитимность</div>
+                  <div class="scheme-desc">Обоснование власти для добровольного подчинения</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="subsection-title">Значение признания власти обществом</h3>
+              <p class="text">
+                Признание власти обществом (легитимность) имеет критическое значение для выживания государства. 
+                Легитимная власть не требует постоянного расхода ресурсов на тотальный контроль и подавление. 
+                Люди подчиняются приказам добровольно.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Бюрократия -->
+      <section id="bureaucracy" class="section">
+        <div class="section-container">
+          <div class="content-column">
+            <h2 class="section-title">Теория рациональной бюрократии М. Вебера</h2>
+            
+            <div class="content-block">
+              <h3 class="subsection-title">Причины возникновения рациональной бюрократии</h3>
+              <p class="text">
+                Возникновение рациональной бюрократии Вебер связывал с процессами модернизации, 
+                рационализации и усложнения общественной жизни.
+              </p>
+              
+              <div class="reasons-list">
+                <div class="reason-item">
+                  <div class="reason-number">1</div>
+                  <h4 class="reason-title">Рост размеров государства</h4>
+                  <p class="reason-desc">
+                    Современное государство должно управлять огромными территориями и населением. 
+                    Правитель уже не может лично контролировать все процессы.
+                  </p>
+                </div>
+                <div class="reason-item">
+                  <div class="reason-number">2</div>
+                  <h4 class="reason-title">Развитие капитализма</h4>
+                  <p class="reason-desc">
+                    Крупное производство и сложная экономика требуют точного расчёта, 
+                    планирования и предсказуемости.
+                  </p>
+                </div>
+                <div class="reason-item">
+                  <div class="reason-number">3</div>
+                  <h4 class="reason-title">Развитие разделения труда</h4>
+                  <p class="reason-desc">
+                    Появление большого количества профессий требует системы, 
+                    способной координировать деятельность специалистов.
+                  </p>
+                </div>
+                <div class="reason-item">
+                  <div class="reason-number">4</div>
+                  <h4 class="reason-title">Необходимость предсказуемости</h4>
+                  <p class="reason-desc">
+                    Рациональная бюрократия стремится заменить личный произвол общими правилами.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="subsection-title">Основные признаки бюрократической организации</h3>
+              <p class="text">
+                Вебер выделял ряд признаков, которые характеризуют рациональную бюрократическую организацию:
+              </p>
+              
+              <div class="features-grid">
+                <div class="feature-card">
+                  <h4 class="feature-title">Чёткое разделение труда</h4>
+                  <p class="feature-desc">Каждая должность имеет определённый круг обязанностей</p>
+                </div>
+                <div class="feature-card">
+                  <h4 class="feature-title">Иерархическая структура</h4>
+                  <p class="feature-desc">Система должностей, расположенных по уровням</p>
+                </div>
+                <div class="feature-card">
+                  <h4 class="feature-title">Формальные правила</h4>
+                  <p class="feature-desc">Деятельность регулируется установленными нормами</p>
+                </div>
+                <div class="feature-card">
+                  <h4 class="feature-title">Определённая компетенция</h4>
+                  <p class="feature-desc">Каждая должность имеет конкретную сферу полномочий</p>
+                </div>
+                <div class="feature-card">
+                  <h4 class="feature-title">Профессионализм</h4>
+                  <p class="feature-desc">Должность занимает компетентная и подготовленная личность</p>
+                </div>
+                <div class="feature-card">
+                  <h4 class="feature-title">Беспристрастность</h4>
+                  <p class="feature-desc">Решения принимаются на основании правил, а не личных симпатий</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="scheme-block">
+              <h3 class="subsection-title">Схема: Иерархия бюрократической организации</h3>
+              <div class="interactive-scheme hierarchy-scheme">
+                <div class="hierarchy-level level-1">
+                  <div class="hierarchy-role">Руководитель организации</div>
+                </div>
+                <div class="hierarchy-arrow">↓</div>
+                <div class="hierarchy-level level-2">
+                  <div class="hierarchy-role">Заместители</div>
+                </div>
+                <div class="hierarchy-arrow">↓</div>
+                <div class="hierarchy-level level-3">
+                  <div class="hierarchy-role">Руководители подразделений</div>
+                </div>
+                <div class="hierarchy-arrow">↓</div>
+                <div class="hierarchy-level level-4">
+                  <div class="hierarchy-role">Специалисты</div>
+                </div>
+                <div class="hierarchy-arrow">↓</div>
+                <div class="hierarchy-level level-5">
+                  <div class="hierarchy-role">Исполнители</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="subsection-title">Беспристрастность и профессионализация чиновников</h3>
+              <p class="text">
+                Беспристрастность является одним из основных принципов рациональной бюрократии. 
+                Чиновник должен относиться к гражданам и организациям формально и безлично. 
+                Решения не должны зависеть от личных симпатий, дружбы, родственных связей или личной выгоды.
+              </p>
+              <p class="text">
+                Для Вебера принципиально важно отделение чиновника от занимаемой им должности. 
+                Чиновник не владеет должностью — он лишь исполняет её функции.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Заключение -->
+      <section id="conclusion" class="section">
+        <div class="section-container">
+          <div class="content-column">
+            <h2 class="section-title">Рационально-легальное господство и современное государственное управление</h2>
+            
+            <div class="content-block">
+              <h3 class="subsection-title">Связь рациональной бюрократии с легитимностью</h3>
+              <p class="text">
+                Рационально-легальное господство тесно связано с рациональной бюрократией. 
+                Современное бюрократическое государство основано на вере в законность установленных правил 
+                и право тех, кто наделён властью, отдавать приказы.
+              </p>
+            </div>
+
+            <div class="content-block">
+              <h3 class="subsection-title">Преимущества и недостатки бюрократической модели</h3>
+              
+              <div class="pros-cons">
+                <div class="pros-column">
+                  <h4 class="column-title">Преимущества</h4>
+                  <ul class="list">
+                    <li>Стабильность и предсказуемость</li>
+                    <li>Профессионализм и компетентность</li>
+                    <li>Формальное равенство перед законом</li>
+                    <li>Эффективность управления большими организациями</li>
+                    <li>Независимость от личных качеств руководителей</li>
+                  </ul>
+                </div>
+                <div class="cons-column">
+                  <h4 class="column-title">Недостатки</h4>
+                  <ul class="list">
+                    <li>Чрезмерная формализация</li>
+                    <li>Негибкость и бюрократизм</li>
+                    <li>Опасность «железной клетки» рационализации</li>
+                    <li>Процедура важнее цели</li>
+                    <li>Ограничение человеческой свободы</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="subsection-title">Актуальность идей Вебера для современных государств</h3>
+              <p class="text">
+                Теория рациональной бюрократии Макса Вебера является одной из фундаментальных концепций 
+                социологии управления и теории организаций. С развитием современного государства, 
+                капитализма и увеличением масштабов социальных организаций возникла необходимость 
+                в системе управления, способной функционировать независимо от личных качеств отдельных руководителей.
+              </p>
+              <p class="text">
+                Важно понимать двойственность этой системы: она является необходимым и эффективным 
+                инструментом управления сложным современным обществом, но одновременно требует контроля, 
+                чтобы правила и процедуры оставались средством достижения целей, а не превращались в самоцель.
+              </p>
+            </div>
+
+            <div class="conclusion-block">
+              <h3 class="subsection-title">Основные выводы</h3>
+              <div class="conclusions-list">
+                <div class="conclusion-item">
+                  <div class="conclusion-marker">→</div>
+                  <p class="conclusion-text">
+                    Легитимность — это центральное понятие в социологии Вебера, означающее признание 
+                    обществом правомерности власти и обеспечивающее её устойчивость.
+                  </p>
+                </div>
+                <div class="conclusion-item">
+                  <div class="conclusion-marker">→</div>
+                  <p class="conclusion-text">
+                    Государство по Веберу — это институт, претендующий на монополию на легитимное 
+                    физическое насилие в пределах определённой территории.
+                  </p>
+                </div>
+                <div class="conclusion-item">
+                  <div class="conclusion-marker">→</div>
+                  <p class="conclusion-text">
+                    Рациональная бюрократия — это наиболее эффективная форма организации для сложного 
+                    современного общества, основанная на формальных правилах, иерархии и профессионализме.
+                  </p>
+                </div>
+                <div class="conclusion-item">
+                  <div class="conclusion-marker">→</div>
+                  <p class="conclusion-text">
+                    Современное государственное управление основано на рационально-легальном типе 
+                    господства, сочетающем эффективность бюрократии с легитимностью власти.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-text">
+            <p class="footer-uni">Финансовый университет</p>
+            <p class="footer-year">2026</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
