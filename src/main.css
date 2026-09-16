@@ -178,6 +178,7 @@ body {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+  flex-wrap: wrap;
 }
 
 .university {
@@ -185,6 +186,41 @@ body {
   color: var(--accent-color);
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+
+.stories-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.stories-link:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.stories-link:hover .stories-icon,
+.stories-link:hover .stories-text {
+  color: white;
+}
+
+.stories-icon {
+  font-size: var(--font-size-sm);
+  color: var(--accent-color);
+  transition: color var(--transition-fast);
+}
+
+.stories-text {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color var(--transition-fast);
 }
 
 /* === Основной контент === */
