@@ -179,6 +179,13 @@ body {
   align-items: center;
   gap: var(--spacing-md);
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hero-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
 }
 
 .university {
@@ -629,6 +636,51 @@ body {
 .footer-year {
   font-size: var(--font-size-xs);
   color: var(--text-secondary);
+}
+
+/* === Полный текст === */
+.full-text {
+  padding-top: var(--spacing-2xl);
+}
+
+.text-content {
+  margin-top: var(--spacing-2xl);
+}
+
+.text-content h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+  color: var(--text-primary);
+}
+
+.text-content h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  color: var(--text-primary);
+}
+
+.text-content p {
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.text-content p strong {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.back-link-container {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
 }
 
 /* === Адаптивность === */
