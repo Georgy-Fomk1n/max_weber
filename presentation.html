@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Легитимное государство и теория рациональной бюрократии М. Вебера</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/index.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --accent: #256569;
+            --accent-light: rgba(37, 101, 105, 0.08);
+            --accent-mid: rgba(37, 101, 105, 0.15);
+            --text: #1a1a1a;
+            --text-2: #555;
+            --text-3: #888;
+            --text-4: #aaa;
+            --bg: #ffffff;
+            --bg-2: #f5f5f5;
+            --bg-3: #ebebeb;
+            --border: #e0e0e0;
+        }
+
+        /* ===== PROJECTOR MODE ===== */
+        @media (min-width: 1024px) and (min-height: 768px) {
+            :root {
+                --accent: #1e4d50;
+                --accent-light: rgba(30, 77, 80, 0.12);
+                --accent-mid: rgba(30, 77, 80, 0.18);
+                --text: #0d0d0d;
+                --text-2: #333;
+                --text-3: #666;
+                --text-4: #888;
+                --bg: #fafafa;
+                --bg-2: #eeeeee;
+                --bg-3: #e5e5e5;
+                --border: #cccccc;
+            }
+
+            html,
+            body {
+                font-size: 20px;
+            }
+
+            .slide-inner {
+                max-width: 1200px;
+            }
+
+            /* Увеличенные размеры шрифтов для проектора */
+            h1 {
+                font-size: clamp(2.5rem, 5vw, 4rem);
+                font-weight: 800;
+            }
+
+            h2 {
+                font-size: clamp(2rem, 4vw, 3rem);
+                font-weight: 800;
+            }
+
+            h3 {
+                font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+                font-weight: 700;
+            }
+
+            .slide-label {
+                font-size: clamp(0.85rem, 1.8vw, 1rem);
+                letter-spacing: 0.2em;
+            }
+
+            .subtitle {
+                font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            }
+
+            .body-text {
+                font-size: clamp(1.1rem, 2vw, 1.25rem);
+                line-height: 1.8;
+            }
+
+            .small-text {
+                font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            }
+
+            .info-card,
+            .def-card,
+            .type-card {
+                padding: clamp(1.5rem, 2.5vw, 2rem);
+                border-width: 2px;
+            }
+
+            .flow-chain .item {
+                padding: clamp(0.75rem, 1.8vw, 1rem) clamp(1.2rem, 2.5vw, 1.75rem);
+                font-size: clamp(0.85rem, 1.8vw, 1rem);
+            }
+
+            .tag {
+                padding: clamp(0.5rem, 1.2vw, 0.6rem) clamp(0.9rem, 1.8vw, 1.2rem);
+                font-size: clamp(0.85rem, 1.8vw, 1rem);
+                border-width: 1.5px;
+            }
+
+            .step-item {
+                padding: clamp(1rem, 1.8vw, 1.25rem) clamp(1.25rem, 2.5vw, 1.5rem);
+                border-width: 1.5px;
+            }
+
+            .callout {
+                padding: clamp(1.25rem, 2.5vw, 1.5rem) clamp(1.5rem, 3vw, 1.75rem);
+                font-size: clamp(1rem, 1.8vw, 1.15rem);
+                border-left-width: 4px;
+            }
+
+            .nav-arrow {
+                width: 56px;
+                height: 56px;
+                border-width: 2px;
+            }
+
+            .nav-dot {
+                width: 10px;
+                height: 10px;
+            }
+
+            .nav-dot.active {
+                height: 28px;
+            }
+
+            .authors-block {
+                padding: clamp(1.5rem, 2.5vw, 2rem) clamp(1.75rem, 3vw, 2.25rem);
+                border-width: 1.5px;
+            }
+
+            .grid-2,
+            .grid-3 {
+                gap: 1.5rem;
+            }
+
+            .grid-2 {
+                max-width: 1000px;
+            }
+
+            .grid-3 {
+                max-width: 1100px;
+            }
+
+            .definition-block {
+                gap: 1.5rem;
+            }
+
+            /* Улучшение читаемости текста на проекторе */
+            .slide-inner {
+                text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+            }
+
+            h1,
+            h2,
+            h3 {
+                text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9);
+            }
+
+            /* Улучшение видимости границ и рамок */
+            .info-card,
+            .def-card,
+            .type-card,
+            .step-item {
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            }
+
+            /* Улучшение видимости прогресс-бара */
+            .progress-segment {
+                height: 4px;
+                background: rgba(0, 0, 0, 0.2);
+            }
+
+            /* Улучшение видимости навигационных элементов */
+            .nav-counter {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            /* Улучшение видимости активных элементов */
+            .type-card.open,
+            .step-item.open {
+                box-shadow: 0 4px 12px rgba(37, 101, 105, 0.15);
+            }
+
+            /* Дополнительные улучшения контрастности */
+            .info-card.accent {
+                background: var(--accent-mid);
+                border-color: var(--accent);
+            }
+
+            .info-card:hover,
+            .step-item:hover,
+            .type-card:hover {
+                border-color: var(--accent);
+                background: var(--accent-light);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .callout {
+                background: var(--accent-mid);
+                border-left-color: var(--accent);
+            }
+
+            .type-card[style*="border-color:var(--accent)"] {
+                background: var(--accent-mid);
+                box-shadow: 0 4px 12px rgba(37, 101, 105, 0.15);
+            }
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* ===== PRESENTATION CONTAINER ===== */
+        .presentation {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateX(40px);
+            padding: 2rem;
+            overflow-y: auto;
+            z-index: 1;
+        }
+
+        .slide.active {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateX(0);
+            z-index: 10;
+        }
+
+        .slide.prev {
+            transform: translateX(-40px);
+        }
+
+        .slide.next {
+            transform: translateX(40px);
+        }
+
+        .slide-inner {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* ===== DESKTOP NAVIGATION ===== */
+        .nav-arrows {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            z-index: 100;
+        }
+
+        .nav-arrow {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--border);
+            background: var(--bg);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            color: var(--text-2);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .nav-arrow:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .nav-arrow:active {
+            transform: scale(0.95);
+        }
+
+        .nav-arrow:disabled {
+            opacity: 0.3;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        @media (hover: none) {
+            .nav-arrow:hover {
+                border-color: var(--border);
+                color: var(--text-2);
+            }
+        }
+
+        .nav-counter {
+            font-size: 0.8rem;
+            color: var(--text-3);
+            font-weight: 500;
+            min-width: 60px;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .nav-dots {
+            position: fixed;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 100;
+        }
+
+        .nav-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--border);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .nav-dot.active {
+            background: var(--accent);
+            height: 20px;
+            border-radius: 3px;
+        }
+
+        /* ===== PROGRESS BAR (mobile stories) ===== */
+        .progress-bar {
+            display: none;
+            position: fixed;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            z-index: 200;
+            gap: 2px;
+            pointer-events: none;
+        }
+
+        .progress-segment {
+            flex: 1;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-segment .fill {
+            width: 0%;
+            height: 100%;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-segment.done .fill {
+            width: 100%;
+        }
+
+        .progress-segment.current .fill {
+            width: 100%;
+            transition: width 8s linear;
+        }
+
+        /* ===== MOBILE STORIES NAVIGATION ===== */
+        .story-touch-zones {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 150;
+            pointer-events: none;
+        }
+
+        .story-touch-zones .zone {
+            position: absolute;
+            pointer-events: all;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .story-touch-zones .zone-left {
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 100%;
+        }
+
+        .story-touch-zones .zone-right {
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 100%;
+        }
+
+        /* ===== MOBILE ADAPTATION ===== */
+        @media (max-width: 768px) {
+            .nav-arrows,
+            .nav-dots {
+                display: none;
+            }
+
+            .progress-bar {
+                display: flex;
+            }
+
+            .story-touch-zones {
+                display: block;
+            }
+
+            .slide {
+                padding: 1.5rem;
+                padding-top: 3rem;
+            }
+
+            .slide-inner {
+                max-width: 100%;
+            }
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        .slide-label {
+            font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 6vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        h3 {
+            font-size: clamp(1.1rem, 3.5vw, 1.25rem);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 3.5vw, 1.4rem);
+            color: var(--text-2);
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .body-text {
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            color: var(--text-2);
+            line-height: 1.7;
+        }
+
+        .small-text {
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+            color: var(--text-3);
+            line-height: 1.6;
+        }
+
+        /* ===== COMPONENTS ===== */
+        .flow-chain {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .flow-chain .item {
+            padding: clamp(0.6rem, 2.5vw, 0.75rem) clamp(1rem, 3.5vw, 1.4rem);
+            background: var(--bg-2);
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .flow-chain .arrow {
+            color: var(--accent);
+            font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Адаптивность для симметричных сеток */
+        @media (max-width: 768px) {
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-card {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: clamp(1rem, 3vw, 1.5rem);
+            transition: all 0.2s;
+        }
+
+        .info-card:hover {
+            border-color: var(--accent);
+        }
+
+        @media (hover: none) {
+            .info-card:hover {
+                border-color: var(--border);
+            }
+        }
+
+        .info-card.accent {
+            background: var(--accent-light);
+            border-color: var(--accent);
+        }
+
+        .info-card h3 {
+            color: var(--accent);
+            font-size: clamp(1rem, 3vw, 1.15rem);
+        }
+
+        .info-card p {
+            color: var(--text-2);
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            line-height: 1.6;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+        }
+
+        .tag {
+            padding: clamp(0.4rem, 1.8vw, 0.5rem) clamp(0.75rem, 2.5vw, 1rem);
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            color: var(--text-2);
+            font-weight: 500;
+        }
+
+        .tag.accent {
+            background: var(--accent-light);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .definition-block {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .def-card {
+            background: var(--bg-2);
+            border: 1.5px solid var(--border);
+            border-radius: 16px;
+            padding: clamp(1.25rem, 4vw, 1.75rem);
+            text-align: center;
+        }
+
+        .def-card .def-label {
+            font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .def-card p {
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .step-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: clamp(0.75rem, 2.5vw, 1rem) clamp(1rem, 3vw, 1.25rem);
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .step-item:hover,
+        .step-item.open {
+            border-color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .step-item:active {
+            transform: scale(0.98);
+        }
+
+        @media (hover: none) {
+            .step-item:hover {
+                border-color: var(--border);
+                background: var(--bg-2);
+            }
+        }
+
+        .step-item .num {
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            font-weight: 700;
+            color: var(--accent);
+            min-width: 32px;
+        }
+
+        .step-item .title {
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .step-item .desc {
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+            color: var(--text-2);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+            line-height: 1.5;
+        }
+
+        .step-item.open .desc {
+            max-height: 200px;
+            padding-top: 0.5rem;
+        }
+
+        .step-item.open {
+            flex-wrap: wrap;
+        }
+
+        .type-card {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: clamp(1rem, 3vw, 1.25rem);
+            cursor: pointer;
+            transition: all 0.2s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .type-card:hover,
+        .type-card.open {
+            border-color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .type-card:active {
+            transform: scale(0.98);
+        }
+
+        @media (hover: none) {
+            .type-card:hover {
+                border-color: var(--border);
+                background: var(--bg-2);
+            }
+        }
+
+        .type-card .num {
+            font-size: clamp(1.5rem, 4vw, 1.8rem);
+            font-weight: 800;
+            color: var(--accent);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .type-card h3 {
+            font-size: clamp(1rem, 3vw, 1.15rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .type-card p {
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+            color: var(--text-2);
+            line-height: 1.5;
+        }
+
+        .type-card .example {
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            color: var(--text-3);
+            font-style: italic;
+        }
+
+        .callout {
+            margin-top: 1.5rem;
+            padding: clamp(1rem, 3vw, 1.25rem) clamp(1.25rem, 3.5vw, 1.5rem);
+            background: var(--accent-light);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .callout p {
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .authors-block {
+            margin-top: 2rem;
+            padding: clamp(1rem, 3vw, 1.25rem);
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .authors-block p {
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+            color: var(--text-2);
+            line-height: 1.6;
+        }
+
+        .authors-block .uni {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: var(--accent);
+            margin: 1.5rem auto;
+            border-radius: 1px;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- Progress Bar (Mobile Stories) -->
+        <div class="progress-bar" id="progressBar"></div>
+
+        <!-- Touch Zones (Mobile Stories) -->
+        <div class="story-touch-zones">
+            <div class="zone zone-left" id="touchLeft"></div>
+            <div class="zone zone-right" id="touchRight"></div>
+        </div>
+
+        <!-- Slide 1: Title -->
+        <div class="slide active" data-slide="0">
+            <div class="slide-inner">
+                <div class="slide-label">Социология · Макс Вебер</div>
+                <h1>Легитимное государство и теория рациональной бюрократии</h1>
+                <p class="subtitle">Исследование концепции легитимности, природы государства и бюрократической организации</p>
+                <div class="authors-block">
+                    <p class="uni">Финансовый университет</p>
+                    <p class="small-text">2026</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Введение -->
+        <div class="slide" data-slide="1">
+            <div class="slide-inner">
+                <div class="slide-label">01 — Введение</div>
+                <h2>Понятие легитимности</h2>
+                <p class="body-text">Почему люди признают власть определённых лиц или учреждений и соглашаются выполнять их распоряжения?</p>
+                <div class="info-card accent">
+                    <h3>Макс Вебер (1864–1920)</h3>
+                    <p>Немецкий социолог, создатель понятия легитимности в социологии господства</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Власть и господство -->
+        <div class="slide" data-slide="2">
+            <div class="slide-inner">
+                <div class="slide-label">02 — Власть и господство</div>
+                <h2>Власть vs Господство</h2>
+                <div class="definition-block">
+                    <div class="def-card">
+                        <div class="def-label">Власть</div>
+                        <p>Возможность осуществить собственную волю вопреки сопротивлению</p>
+                    </div>
+                    <div class="def-card">
+                        <div class="def-label">Господство</div>
+                        <p>Вероятность того, что распоряжение будет выполнено</p>
+                    </div>
+                </div>
+                <div class="callout">
+                    <p>Власть может существовать при сопротивлении, но для устойчивого господства важно <span class="highlight">признание права на власть</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Легитимность -->
+        <div class="slide" data-slide="3">
+            <div class="slide-inner">
+                <div class="slide-label">03 — Легитимность</div>
+                <h2>Сущность легитимности</h2>
+                <p class="body-text">Признание правомерности власти или установленного порядка</p>
+                <div class="flow-chain">
+                    <div class="item">Власть</div>
+                    <div class="arrow">→</div>
+                    <div class="item">Легитимность</div>
+                    <div class="arrow">→</div>
+                    <div class="item">Добровольное подчинение</div>
+                </div>
+                <div class="callout">
+                    <p>Легитимность — это внутреннее обоснование власти, благодаря которому люди подчиняются <span class="highlight">добровольно</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Три типа легитимности -->
+        <div class="slide" data-slide="4">
+            <div class="slide-inner">
+                <div class="slide-label">04 — Типы легитимности</div>
+                <h2>Три типа легитимного господства</h2>
+                <div class="grid-3">
+                    <div class="type-card">
+                        <div class="num">01</div>
+                        <h3>Традиционное</h3>
+                        <p>Вера в святость издревле существующих порядков</p>
+                        <div class="example">Монархия</div>
+                    </div>
+                    <div class="type-card">
+                        <div class="num">02</div>
+                        <h3>Харизматическое</h3>
+                        <p>Преданность личности лидера с исключительными качествами</p>
+                        <div class="example">Пророки, революционные лидеры</div>
+                    </div>
+                    <div class="type-card">
+                        <div class="num">03</div>
+                        <h3>Рационально-легальное</h3>
+                        <p>Вера в законность установленных правил</p>
+                        <div class="example">Современное государство</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Государство -->
+        <div class="slide" data-slide="5">
+            <div class="slide-inner">
+                <div class="slide-label">05 — Государство</div>
+                <h2>Понятие государства по Веберу</h2>
+                <p class="body-text">Институт, претендующий на монополию на легитимное физическое насилие</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="num">1</div>
+                        <div class="title">Территориальность</div>
+                        <div class="desc">Власть ограничена границами государства</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="num">2</div>
+                        <div class="title">Монополия на насилие</div>
+                        <div class="desc">Только государство имеет право применять силу</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="num">3</div>
+                        <div class="title">Институциональный характер</div>
+                        <div class="desc">Государство отделено от конкретных личностей</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Легитимное государство -->
+        <div class="slide" data-slide="6">
+            <div class="slide-inner">
+                <div class="slide-label">06 — Легитимное государство</div>
+                <h2>Государство как институт легитимного принуждения</h2>
+                <div class="flow-chain">
+                    <div class="item">Власть</div>
+                    <div class="arrow">→</div>
+                    <div class="item">Государство</div>
+                    <div class="arrow">→</div>
+                    <div class="item">Легитимность</div>
+                </div>
+                <div class="callout">
+                    <p>Сила государства отличается от силы банды преступников именно <span class="highlight">наличием легитимности</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Бюрократия -->
+        <div class="slide" data-slide="7">
+            <div class="slide-inner">
+                <div class="slide-label">07 — Бюрократия</div>
+                <h2>Теория рациональной бюрократии</h2>
+                <p class="body-text">Рациональный тип организации управления, основанный на формальных правилах</p>
+                <div class="tag-list">
+                    <div class="tag accent">Иерархия</div>
+                    <div class="tag accent">Специализация</div>
+                    <div class="tag accent">Формальные правила</div>
+                    <div class="tag accent">Профессионализм</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Причины бюрократии -->
+        <div class="slide" data-slide="8">
+            <div class="slide-inner">
+                <div class="slide-label">08 — Причины возникновения</div>
+                <h2>Почему возникает бюрократия?</h2>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="num">1</div>
+                        <div class="title">Рост размеров государства</div>
+                        <div class="desc">Необходимость управления огромными территориями</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="num">2</div>
+                        <div class="title">Развитие капитализма</div>
+                        <div class="desc">Требование точного расчёта и планирования</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="num">3</div>
+                        <div class="title">Разделение труда</div>
+                        <div class="desc">Координация большого количества специалистов</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="num">4</div>
+                        <div class="title">Предсказуемость</div>
+                        <div class="desc">Замена личного произвола общими правилами</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Признаки бюрократии -->
+        <div class="slide" data-slide="9">
+            <div class="slide-inner">
+                <div class="slide-label">09 — Признаки бюрократии</div>
+                <h2>Основные признаки бюрократической организации</h2>
+                <div class="grid-2">
+                    <div class="info-card">
+                        <h3>Структура</h3>
+                        <p>Чёткое разделение труда, иерархическая система</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Правила</h3>
+                        <p>Формальные нормы, инструкции и процедуры</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Компетенция</h3>
+                        <p>Определённая сфера полномочий для каждой должности</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Профессионализм</h3>
+                        <p>Компетентные и подготовленные специалисты</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Преимущества и недостатки -->
+        <div class="slide" data-slide="10">
+            <div class="slide-inner">
+                <div class="slide-label">10 — Оценка</div>
+                <h2>Преимущества и недостатки бюрократии</h2>
+                <div class="grid-2">
+                    <div class="info-card accent">
+                        <h3>Преимущества</h3>
+                        <ul class="small-text">
+                            <li>• Стабильность и предсказуемость</li>
+                            <li>• Профессионализм</li>
+                            <li>• Формальное равенство</li>
+                            <li>• Эффективность управления</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Недостатки</h3>
+                        <ul class="small-text">
+                            <li>• Чрезмерная формализация</li>
+                            <li>• Негибкость</li>
+                            <li>• «Железная клетка» рационализации</li>
+                            <li>• Процедура важнее цели</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Заключение -->
+        <div class="slide" data-slide="11">
+            <div class="slide-inner">
+                <div class="slide-label">11 — Заключение</div>
+                <h2>Основные выводы</h2>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="num">→</div>
+                        <div class="title">Легитимность — основа устойчивой власти</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="num">→</div>
+                        <div class="title">Государство — монополия на легитимное насилие</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="num">→</div>
+                        <div class="title">Бюрократия — эффективная форма организации</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="num">→</div>
+                        <div class="title">Современное государство = рационально-легальное господство + бюрократия</div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="authors-block">
+                    <p class="uni">Финансовый университет</p>
+                    <p class="small-text">2026</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-arrows">
+            <button class="nav-arrow" id="prevBtn" aria-label="Предыдущий слайд">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 5l-8 5 8 5"/>
+                </svg>
+            </button>
+            <div class="nav-counter" id="navCounter">1/12</div>
+            <button class="nav-arrow" id="nextBtn" aria-label="Следующий слайд">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 5l8 5-8 5"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="nav-dots" id="navDots"></div>
+    </div>
+
+    <script>
+        // === Presentation Manager ===
+        class PresentationManager {
+            constructor() {
+                this.currentSlide = 0;
+                this.slides = document.querySelectorAll('.slide');
+                this.totalSlides = this.slides.length;
+                this.progressBar = document.getElementById('progressBar');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.navCounter = document.getElementById('navCounter');
+                this.navDots = document.getElementById('navDots');
+                this.touchLeft = document.getElementById('touchLeft');
+                this.touchRight = document.getElementById('touchRight');
+                
+                this.autoProgressInterval = null;
+                this.autoProgressDelay = 8000;
+                this.isMobile = window.innerWidth <= 768;
+                
+                this.init();
+            }
+            
+            init() {
+                this.createProgressSegments();
+                this.createNavDots();
+                this.updateSlide();
+                this.addEventListeners();
+                this.startAutoProgress();
+            }
+            
+            createProgressSegments() {
+                this.progressBar.innerHTML = '';
+                for (let i = 0; i < this.totalSlides; i++) {
+                    const segment = document.createElement('div');
+                    segment.className = 'progress-segment';
+                    segment.innerHTML = '<div class="fill"></div>';
+                    this.progressBar.appendChild(segment);
+                }
+                this.progressSegments = this.progressBar.querySelectorAll('.progress-segment');
+            }
+            
+            createNavDots() {
+                this.navDots.innerHTML = '';
+                for (let i = 0; i < this.totalSlides; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'nav-dot';
+                    dot.dataset.index = i;
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    this.navDots.appendChild(dot);
+                }
+                this.navDotElements = this.navDots.querySelectorAll('.nav-dot');
+            }
+            
+            updateSlide() {
+                // Update slides
+                this.slides.forEach((slide, index) => {
+                    slide.classList.remove('active', 'prev', 'next');
+                    if (index === this.currentSlide) {
+                        slide.classList.add('active');
+                    } else if (index < this.currentSlide) {
+                        slide.classList.add('prev');
+                    } else {
+                        slide.classList.add('next');
+                    }
+                });
+                
+                // Update progress bar
+                this.progressSegments.forEach((segment, index) => {
+                    segment.classList.remove('done', 'current');
+                    if (index < this.currentSlide) {
+                        segment.classList.add('done');
+                    } else if (index === this.currentSlide) {
+                        segment.classList.add('current');
+                    }
+                });
+                
+                // Update navigation
+                this.prevBtn.disabled = this.currentSlide === 0;
+                this.nextBtn.disabled = this.currentSlide === this.totalSlides - 1;
+                this.navCounter.textContent = `${this.currentSlide + 1}/${this.totalSlides}`;
+                
+                // Update dots
+                this.navDotElements.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+                
+                // Reset auto progress
+                this.resetAutoProgress();
+            }
+            
+            goToSlide(index) {
+                if (index >= 0 && index < this.totalSlides) {
+                    this.currentSlide = index;
+                    this.updateSlide();
+                }
+            }
+            
+            nextSlide() {
+                if (this.currentSlide < this.totalSlides - 1) {
+                    this.currentSlide++;
+                    this.updateSlide();
+                }
+            }
+            
+            prevSlide() {
+                if (this.currentSlide > 0) {
+                    this.currentSlide--;
+                    this.updateSlide();
+                }
+            }
+            
+            addEventListeners() {
+                // Desktop navigation
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                // Keyboard
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight' || e.key === ' ') {
+                        e.preventDefault();
+                        this.nextSlide();
+                    } else if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        this.prevSlide();
+                    }
+                });
+                
+                // Touch zones for mobile
+                this.touchLeft.addEventListener('click', () => this.prevSlide());
+                this.touchRight.addEventListener('click', () => this.nextSlide());
+                
+                // Touch swipe
+                let touchStartX = 0;
+                let touchEndX = 0;
+                
+                document.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                    this.resetAutoProgress();
+                }, { passive: true });
+                
+                document.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    const diff = touchStartX - touchEndX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                }, { passive: true });
+                
+                // Wheel for desktop
+                document.addEventListener('wheel', (e) => {
+                    this.resetAutoProgress();
+                    if (e.deltaY > 0) {
+                        this.nextSlide();
+                    } else if (e.deltaY < 0) {
+                        this.prevSlide();
+                    }
+                }, { passive: true });
+                
+                // Visibility change
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        this.stopAutoProgress();
+                    } else {
+                        this.startAutoProgress();
+                    }
+                });
+                
+                // Resize handler
+                window.addEventListener('resize', () => {
+                    this.isMobile = window.innerWidth <= 768;
+                });
+            }
+            
+            startAutoProgress() {
+                this.stopAutoProgress();
+                this.autoProgressInterval = setInterval(() => {
+                    this.nextSlide();
+                }, this.autoProgressDelay);
+            }
+            
+            stopAutoProgress() {
+                if (this.autoProgressInterval) {
+                    clearInterval(this.autoProgressInterval);
+                    this.autoProgressInterval = null;
+                }
+            }
+            
+            resetAutoProgress() {
+                this.stopAutoProgress();
+                this.startAutoProgress();
+            }
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            new PresentationManager();
+        });
+    </script>
+</body>
+</html>
