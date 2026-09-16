@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig({
-  base: '/weber-site/', // Базовый путь для GitHub Pages
+  base: '/', // Базовый путь для GitHub Pages
   build: {
     outDir: 'dist',
     sourcemap: true,
